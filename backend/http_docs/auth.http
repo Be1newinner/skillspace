@@ -1,0 +1,50 @@
+@BASE_URL=http://localhost:8000/auth
+
+### LOGIN API 
+POST {{BASE_URL}}/login HTTP/1.1
+content-type: application/json
+
+{
+      "email": "be1newinner@gmail.com",
+      "password": "123456"
+}
+
+
+### REGISTER API
+POST {{BASE_URL}}/register HTTP/1.1
+content-type: application/json
+
+{
+      "email": "be1newinner@gmail.com",
+      "password": "123456",
+      "name": "vij",
+      "gender": "MALE",
+      "phone": "8130506284"
+}
+
+### Refresh Access Token
+POST {{BASE_URL}}/refresh-token HTTP/1.1
+content-type: application/json
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoiYmUxbmV3aW5uZXJAZ21haWwuY29tIiwicm9sZSI6IkNMSUVOVCIsInVpZCI6IjY4MTlkNzAzZGI1ODYwZjBmNjI2ZjE0MSJ9LCJpYXQiOjE3NDY1MzEwOTUsImV4cCI6MTc0NzEzNTg5NX0.6pa0KZAtCkoDxA4olD3FZ5DebQgQb0GDuveaOSQTzDo
+
+### FORGOT PASSWORD API
+POST {{BASE_URL}}/forgot-password HTTP/1.1
+content-type: application/json
+
+{ 
+      "email": "be1newinner@gmail.com"
+}
+
+
+### VERIFY PASSWORD API
+POST {{BASE_URL}}/verify-password HTTP/1.1
+content-type: application/json
+
+{
+      "email": "be1newinner@gmail.com",
+      "otp": "942134",
+      "newPassword": "123456"
+}
+
+
+
